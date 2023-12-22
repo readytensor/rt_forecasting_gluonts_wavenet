@@ -34,7 +34,6 @@ class Forecaster:
         self,
         data_schema: ForecastingSchema,
         history_forecast_ratio: int = None,
-        lags_forecast_ratio: int = None,
         num_bins: int = 1024,
         num_residual_channels: int = 24,
         num_skip_channels: int = 32,
@@ -62,11 +61,6 @@ class Forecaster:
                 Sets the history length depending on the forecast horizon.
                 For example, if the forecast horizon is 20 and the history_forecast_ratio is 10,
                 history length will be 20*10 = 200 samples.
-
-            lags_forecast_ratio (int):
-                Sets the context parameters depending on the forecast horizon.
-                context_length = forecast horizon * lags_forecast_ratio
-                This parameters overides lags parameters.
 
             num_residual_channels (int): Number of residual channels.
 
@@ -121,9 +115,6 @@ class Forecaster:
             self.history_length = (
                 self.data_schema.forecast_length * history_forecast_ratio
             )
-
-        if lags_forecast_ratio:
-            self.history_length = self.data_schema.forecast_length * lags_forecast_ratio
 
         early_stopping = EarlyStopping(
             monitor="train_loss",
