@@ -7,7 +7,7 @@
   "temperature": 1.0,
   "use_log_scale_feature": true,
   "batch_size": 32,
-  "lr": 1e-3,
+  "lr": 1e-2,
   "early_stopping": true,
   "early_stopping_patience": 30,
   "min_delta": 0.001,
