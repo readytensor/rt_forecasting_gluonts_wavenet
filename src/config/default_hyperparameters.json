@@ -1,0 +1,17 @@
+{
+  "history_forecast_ratio": 10,
+  "lags_forecast_ratio": 3,
+  "num_bins": 512,
+  "num_residual_channels": 12,
+  "num_skip_channels": 16,
+  "num_stacks": 1,
+  "temperature": 1.0,
+  "use_log_scale_feature": true,
+  "batch_size": 32,
+  "lr": 1e-3,
+  "early_stopping": true,
+  "early_stopping_patience": 20,
+  "min_delta": 0.001,
+  "trainer_kwargs": {"max_epochs": 500, "accelerator": "gpu"},
+  "use_exogenous": true
+}
