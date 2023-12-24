@@ -4,13 +4,14 @@
   "num_residual_channels": 24,
   "num_skip_channels": 32,
   "num_stacks": 1,
+  "dilation_depth": 4,
   "temperature": 1.0,
-  "use_log_scale_feature": true,
+  "use_log_scale_feature": false,
   "batch_size": 32,
   "lr": 1e-2,
   "early_stopping": true,
-  "early_stopping_patience": 30,
+  "early_stopping_patience": 20,
   "min_delta": 0.001,
-  "trainer_kwargs": {"max_epochs": 500, "accelerator": "gpu"},
+  "trainer_kwargs": {"max_epochs": 200, "accelerator": "gpu"},
   "use_exogenous": true
 }
