@@ -26,16 +26,6 @@ Static :white_check_mark:
 
 ---
 
-### Covariates Support:
-
-Past :x:
-
-Future :white_check_mark:
-
-Static :white_check_mark:
-
----
-
 Here are the highlights of this implementation: <br/>
 
 - A **WaveNet Forecaster** algorithm built using **GluonTS**
@@ -120,8 +110,7 @@ pip install -r requirements.txt
 
 ## LICENSE
 
-This project is provided under the Apache 2.0 License. Please see the [LICENSE](LICENSE) file for more information.
-
+This project is provided under the Apache-2.0 License. Please see the [LICENSE](LICENSE) file for more information.
 
 ## Contact Information
 
